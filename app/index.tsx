@@ -10,6 +10,7 @@ const quickCalcs = [
   { label: 'Digital Payments', icon: 'card', route: '/digitalpayment', color: '#f77f00' },
   { label: 'Retirement & Pension', icon: 'cash-outline', route: '/retirementpension', color: '#06d6a0' },
   { label: 'Government Schemes', icon: 'layers', route: '/govtscheme', color: '#06d6a0' },
+  { label: 'Calculators', icon: 'calculator-outline', route: '/calculators', color: '#06d6a0' },
 ];
 
 const features = [
