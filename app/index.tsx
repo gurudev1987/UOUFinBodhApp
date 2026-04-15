@@ -3,11 +3,13 @@ import { router } from 'expo-router';
 import { Ionicons,AntDesign, MaterialIcons } from '@expo/vector-icons';
 
 const quickCalcs = [
-  { label: 'Insurance', icon: 'shield-checkmark', route: '/calculators/basic', color: '#00d4ff' },
-  { label: 'Investments', icon: 'trending-up', route: '/calculators/bmi', color: '#f72585' },
-  { label: 'Digital Payments', icon: 'card', route: '/calculators/age', color: '#f77f00' },
-  { label: 'Loan', icon: 'cash-outline', route: '/calculators/loan', color: '#06d6a0' },
-  { label: 'Government Schemes', icon: 'layers', route: '/calculators/Sim', color: '#06d6a0' },
+  { label: 'Finance Basic Concept', icon: 'book-outline', route: '/basics', color: '#f700b9e7' },
+  { label: 'Banking', icon: 'business-outline', route: '/banking', color: '#f77f00' },
+  { label: 'Insurance', icon: 'shield-checkmark', route: '/insurance', color: '#00d4ff' },
+  { label: 'Investments', icon: 'trending-up', route: '/investments', color: '#f72585' },
+  { label: 'Digital Payments', icon: 'card', route: '/digitalpayment', color: '#f77f00' },
+  { label: 'Retirement & Pension', icon: 'cash-outline', route: '/retirementpension', color: '#06d6a0' },
+  { label: 'Government Schemes', icon: 'layers', route: '/govtscheme', color: '#06d6a0' },
 ];
 
 const features = [

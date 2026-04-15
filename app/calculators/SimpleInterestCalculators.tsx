@@ -319,7 +319,8 @@ export default function SimpleInterestCalculator() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#0a0e1a' },
+  container: { flex: 1, backgroundColor: '#fff' },
+  // container: { flex: 1, backgroundColor: '#0a0e1a' },
   content: { padding: 20, paddingBottom: 48 },
 
   formulaCard: {

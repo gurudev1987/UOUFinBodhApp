@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
 import { DrawerActions } from '@react-navigation/native';
 
 function CustomDrawerContent(props: any) {
@@ -18,7 +17,6 @@ function CustomDrawerContent(props: any) {
       style={styles.drawerBg}
       contentContainerStyle={{ flex: 1 }}
     >
-      {/* Header */}
       <View style={styles.drawerHeader}>
         <View style={styles.logoBox}>
           <Ionicons name="calculator" size={28} color="#00d4ff" />
@@ -28,7 +26,6 @@ function CustomDrawerContent(props: any) {
       </View>
 
       <View style={styles.divider} />
-
       <DrawerItemList {...props} />
 
       <View style={styles.drawerFooter}>
@@ -69,6 +66,7 @@ export default function RootLayout() {
           ),
         })}
       >
+        {/* ===== VISIBLE DRAWER SCREENS ===== */}
         <Drawer.Screen
           name="index"
           options={{
@@ -90,16 +88,127 @@ export default function RootLayout() {
           }}
         />
         <Drawer.Screen
-          name="contents/index"
+          name="govtscheme/index"
           options={{
-            title: 'Contents',
-            drawerLabel: 'Contents',
+            title: 'Government Scheme',
+            drawerLabel: 'Government Scheme',
             drawerIcon: ({ color, size }) => (
-              <Ionicons name="book" size={size} color={color} />
+              <Ionicons name="layers" size={size} color={color} />
             ),
           }}
         />
-        {/* Hide detail screens from drawer */}
+        <Drawer.Screen
+          name="retirementpension/index"
+          options={{
+            title: 'Retirement & Pension',
+            drawerLabel: 'Retirement & Pension',
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="layers" size={size} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="insurance/index"
+          options={{
+            title: 'Insurance',
+            drawerLabel: 'Insurance',
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="shield-checkmark-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="digitalpayment/index"
+          options={{
+            title: 'Digital Payments',
+            drawerLabel: 'Digital Payments',
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="phone-portrait-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="investments/index"
+          options={{
+            title: 'investments',
+            drawerLabel: 'investments',
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="trending-up-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="banking/index"
+          options={{
+            title: 'Banking',
+            drawerLabel: 'Banking',
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="business-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="basics/index"
+          options={{
+            title: 'Finance Basic Concepts',
+            drawerLabel: 'Finance Basic Concepts',
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="book-outline" size={size} color={color} />
+            ),
+          }}
+        />
+
+        {/* ===== HIDDEN CONTENT SCREENS ===== */}
+        <Drawer.Screen
+          name="basics"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Basic Concepts' }}
+        />
+        <Drawer.Screen
+          name="basics/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Basic Concepts Detail' }}
+        />
+        <Drawer.Screen
+          name="banking"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Banking' }}
+        />
+        <Drawer.Screen
+          name="banking/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Banking Detail' }}
+        />
+        <Drawer.Screen
+          name="investments"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Investments' }}
+        />
+        <Drawer.Screen
+          name="investments/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Investment Detail' }}
+        />
+        <Drawer.Screen
+          name="digitalpayment"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Digital Payments' }}
+        />
+        <Drawer.Screen
+          name="digitalpayment/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Payment Detail' }}
+        />
+        <Drawer.Screen
+          name="insurance"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Insurance' }}
+        />
+        <Drawer.Screen
+          name="insurance/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Insurance Detail' }}
+        />
+        <Drawer.Screen
+          name="govtscheme/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Scheme Detail' }}
+        />
+        <Drawer.Screen
+          name="retirementpension/[id]"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Retirement & Pension' }}
+        />
+
+        {/* ===== HIDDEN CALCULATOR SCREENS ===== */}
         <Drawer.Screen
           name="calculators/basic"
           options={{ drawerItemStyle: { display: 'none' }, title: 'Basic Calculator' }}
@@ -144,6 +253,21 @@ export default function RootLayout() {
           name="calculators/StepUpSIP"
           options={{ drawerItemStyle: { display: 'none' }, title: 'Step-Up SIP Calculator' }}
         />
+
+        {/* ✅ NAYE CALCULATORS - SAHI JAGAH HIDDEN */}
+        <Drawer.Screen
+          name="calculators/incometax"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Income Tax Calculator' }}
+        />
+        <Drawer.Screen
+          name="calculators/SSYCalculator"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'Sukanya Samriddhi Yojana' }}
+        />
+        <Drawer.Screen
+          name="calculators/FDRDCalculator"
+          options={{ drawerItemStyle: { display: 'none' }, title: 'FD & RD Calculator' }}
+        />
+
       </Drawer>
     </GestureHandlerRootView>
   );

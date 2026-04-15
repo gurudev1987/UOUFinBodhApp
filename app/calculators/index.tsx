@@ -25,7 +25,7 @@ const calculators = [
     id: 'SIP',
     title: 'SIP Calculator',
     description: 'Calculate SIP',
-    icon: 'repeat-outline',
+    icon: 'calculator-outline',
     color: '#f77f00',
     tags: ['Investment', 'Mony'],
     route: '/calculators/sip',
@@ -34,7 +34,7 @@ const calculators = [
     id: 'STEPSIP',
     title: 'Step-Up SIP Calculator',
     description: 'Step-Up SIP Calculator',
-    icon: 'swap-horizontal-outline',
+    icon: 'calculator-outline',
     color: '#06d6a0',
     tags: ['Finance', 'Travel'],
     route: '/calculators/StepUpSIP',
@@ -43,7 +43,7 @@ const calculators = [
     id: 'FIC',
     title: 'Financial Independence Calculator',
     description: 'Calculate Financial Independence',
-    icon: 'trending-up-outline',
+    icon: 'calculator-outline',
     color: '#a855f7',
     tags: ['Investment', 'Finance'],
     route: '/calculators/FICalculator',
@@ -53,10 +53,19 @@ const calculators = [
     id: 'loan',
     title: 'Loan Calculator',
     description: 'EMI, interest & repayment schedule',
-    icon: 'cash-outline',
+    icon: 'calculator-outline',
     color: '#fbbf24',
     tags: ['Finance', 'Banking'],
     route: '/calculators/loan',
+  },
+  {
+    id: 'sukanya',
+    title: 'Sukanya Samridhi Yojna',
+    description: 'EMI, interest & repayment schedule',
+    icon: 'calculator-outline',
+    color: '#00f790',
+    tags: ['Finance', 'Banking'],
+    route: '/calculators/SSYCalculator',
   },
 ];
 
@@ -103,7 +112,7 @@ export default function CalculatorsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#0a0e1a' },
+  container: { flex: 1, backgroundColor: '#fffff' },
   content: { padding: 20, paddingBottom: 48 },
   headerBox: {
     backgroundColor: '#0d1117',
